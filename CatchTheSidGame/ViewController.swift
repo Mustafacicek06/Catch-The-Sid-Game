@@ -21,8 +21,8 @@ class ViewController: UIViewController {
     var timer = Timer()
     var score : Int32 = 0
     var highScore : Int32 = 0
-    let imageViewWidth = CGFloat(100)
-    let imageViewHeight = CGFloat(100)
+    let imageViewWidth = CGFloat(125)
+    let imageViewHeight = CGFloat(125)
     var countTimer = 0
     
     // constants
@@ -114,6 +114,7 @@ class ViewController: UIViewController {
         }
         
         let replayButton = UIAlertAction(title: gameOverAlertReplay, style: UIAlertAction.Style.default) { [self] UIAlertAction in
+            sidImage.isUserInteractionEnabled = true
             self.score = 0
             self.currentScoreLabel.text = "Score : \(self.score)"
             self.countTimer = 10
