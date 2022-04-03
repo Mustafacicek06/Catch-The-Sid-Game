@@ -61,6 +61,7 @@ class ViewController: UIViewController {
             let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap))
             sidImage.addGestureRecognizer(tap)
             sidImage.isUserInteractionEnabled = true
+        
         }
     
     @objc func handleTap() {
@@ -97,6 +98,8 @@ class ViewController: UIViewController {
             
             createAlert()
             timer.invalidate()
+            
+            sidImage.isUserInteractionEnabled = false
             
             
            
